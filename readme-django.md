@@ -1,6 +1,6 @@
-# _WELCOME TO COMP333 BACKEND_
+# _WELCOME TO SONGODB_
 
-#### Written by Nelson Lin Matthew Kim
+#### Written by Nelson Lin and Matthew Kim
 
 # Instructions
 
@@ -27,6 +27,18 @@ run: python3 manage.py runserver
 ## Step Four
 paste development server into browser:
 [local](http://127.0.0.1:8000/music/)
+
+
+# ADMIN PAGE
+Go to url: 127.0.0.1:8000/admin
+by replacing /music with /admin.
+
+Username: mostvaluableship
+Password: friendship
+
+Observe you can see the database in table form. 
+
+You can filter by endpoint and table.
 
 
 # Project Blueprint

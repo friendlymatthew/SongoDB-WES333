@@ -43,6 +43,7 @@ You can filter by endpoint and table.
 
 # Project Blueprint
 
+```bash
 comp333_backend
 |
 | django_db
@@ -58,7 +59,7 @@ comp333_backend
     - models.py (created Table Models)
     - urls.py (routed html_view)
     - views.py (set up rendering for each endpoint)
-
+```
 
 #### This project was made for Software Engineering class, COMP333. 
 

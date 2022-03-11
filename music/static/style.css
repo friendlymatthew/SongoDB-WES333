@@ -1,0 +1,97 @@
+html,
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #0F172A;
+}
+
+
+.card {
+  background-color: #334155;
+  width: 50%;
+  padding: 40px;
+  margin: 20px 0px;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.card-endpoint {
+    opacity: 80;
+    padding: 20px 0px;
+}
+
+.card-form-field {
+    padding: 20px 0px;
+    font-size: 20px;
+}
+
+.card-form-field-input {
+    padding: 8px 0px;
+}
+
+.submit-button {
+    background-color: white;
+    color: #0F172A;
+    outline: none;
+    padding: 5px 8px;
+    border-radius: 8px;
+    margin: 10px 0px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.submit-button:hover {
+    background-color: #475569;
+    opacity: 60;
+    color: white;
+    
+}
+
+
+input {
+    padding: 4px 7px;
+    font-size: 15px;
+    outline: none;
+    margin-left: 2px;
+    width: auto;
+}
+
+.submit {
+    background-color: aqua;
+}
+
+.response {
+    background-color: green;
+    padding: 20px 15px;
+}
+
+.response-null {
+    background-color: red;
+    padding: 20px 15px;
+    font-weight: 700;
+}
+
+.response p {
+    padding: 2px 0px;
+}
+
+.response-title {
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 690px) {
+    .card {
+        width: 100%;
+        font-size: 20px;
+        padding: 50px;
+    }
+}

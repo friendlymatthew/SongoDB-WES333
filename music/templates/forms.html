@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Content-Type"
+      content="application/x-www-form-urlencoded"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css'%}" type="text/css" />
+    <title>Music</title>
+  </head>
+  <body>
+    <section class="card">
+      <div class="card-title">Create User</div>
+      <!-- form for creating new account -->
+      <form method="POST" action="" class="card-endpoint">
+        <div class="card-form-field">{% csrf_token %} 
+          <div class="card-form-field-input">
+
+            Username: {{ userF.username }}
+          </div>
+          <div class="card-form-field-input">
+
+            Password:  {{ userF.password }}  
+          </div>
+        </div>
+        <input
+          class="submit-button"
+          type="submit"
+          name="register"
+          value="Create Account"
+        />
+      </form>
+      {% if userRet %}
+        {% if userRet == -1 %}
+          <div class="response-null"> username already exists</div>
+        {% else %}
+      <section class="response">
+        <div class="response-title">
+          Server Response {{ userRet }} has been successfully registered</div></section>
+          {% endif %}
+
+      {% endif %}
+    </section>
+
+    <section class="card">
+      <div class="card-title">Get Results By Username</div>
+      <!-- form for getting a user's ratings -->
+      <form method="POST" action="" class="card-endpoint">
+        <div class="card-form-field" ?>{% csrf_token %} {{ ratingF.as_p }}</div>
+        <input
+          class="submit-button"
+          type="submit"
+          name="retrieve_rating"
+          value="Get Results"
+        />
+      </form>
+      {% if ratingRet == -1 %}
+      <div class="response-null">No user song ratings</div>
+      {% else %}
+      {% for i in ratingRet %}
+      <p class="response">{{ i }}</p>
+      {% endfor %}
+      {% endif%}
+    </section>
+
+    <!-- form for getting album information -->
+    <section class="card">
+      <div class="card-title">
+        Get Album Details By Username and Album Title
+      </div>
+      <form method="POST" action="" class="card-endpoint">
+        <div class="card-form-field">{% csrf_token %} {{ albumF.as_p }}</div>
+        <input
+          class="submit-button"
+          type="submit"
+          name="retrieve_album"
+          value="Get Results"
+        />
+      </form>
+
+      {% if albumRet != None %} 
+        {% if albumRet != -1 %}
+          {% for album in albumRet%}
+          <section class="response">
+            <div class="response-title">
+              Server Response
+            </div>
+
+              <p>Album: {{ album.albumTitle }}</p>
+              <p>Artist: {{ album.artistName }}</p>
+
+              <p>Genre: {{ album.genre }}</p>
+              <p>Year Released: {{ album.yearProduced }}</p>
+              <p>Explicit: {{ album.explicit }}</p>
+
+          </section>
+          {% endfor %} 
+        {% else %}
+          <div class="response-null"> Response Not Good </div>
+        {% endif %}
+
+      {% endif %}
+    </section>
+  </body>
+</html>

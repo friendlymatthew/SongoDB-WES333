@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="php-styles.css" type="text/css" />
 
 
-<title>Sample Submission Form</title>
+<title>SongoDB PHP Form</title>
 </head>
 <body>
     <?php

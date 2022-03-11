@@ -1,4 +1,3 @@
-# Written by Matthew Kim, Nelson Lin
 
 ## Start Server using XAMPP
 [server](http://localhost:8080/phpmyadmin)

@@ -1,6 +1,10 @@
-# _START HERE_
+# _SONGO DB_
 
-# SongoDB is created for hw02 - COMP333 at Wesleyan University
+# Please read below:
 
-For Django readme go to `readme-django.md`
-For PHP + SQL Database instructions go to `readme-sql.md`
+## For Django readme go to `readme-django.md`
+
+## For PHP + SQL Database instructions go to `readme-sql.md`
+
+
+### Written by Nelson Lin and Matthew Kim
